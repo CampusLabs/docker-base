@@ -1,6 +1,8 @@
 FROM debian:wheezy
 MAINTAINER Clifton King <cliftonk@gmail.com>
 
+RUN echo "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf
+
 RUN apt-get update \
     && apt-get install -y \
         wget=1.13.4-3+deb7u1 \
